@@ -296,4 +296,20 @@ blockquote {
 
 .foundation-section {
   padding-bottom: 20px;
+}.section-with-bg {
+  position: relative;
+  color: #ffffff;
+}
+
+.section-with-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* dark overlay */
+  z-index: 1;
+}
+
+.section-with-bg > * {
+  position: relative;
+  z-index: 2;
 }
