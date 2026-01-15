@@ -312,4 +312,21 @@ blockquote {
 .section-with-bg > * {
   position: relative;
   z-index: 2;
+}.hero a.donate-btn {
+  display: inline-block !important;
+  margin-top: 25px !important;
+  padding: 16px 40px !important;
+  background-color: #2e7d32 !important;
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  border-radius: 30px !important;
+  position: relative !important;
+  z-index: 20 !important;
+}
+
+.hero a.donate-btn:hover {
+  background-color: #256628 !important;
+  color: #ffffff !important;
 }
