@@ -366,4 +366,37 @@ blockquote {
   line-height: 1.7;
   margin-bottom: 35px;
   color: #333;
+}/* Make sure the mission-vision block stands out on all devices */
+.mission-vision {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  /* Optional: add a soft background for readability if behind an image */
+  /* background: rgba(255,255,255,0.92); */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 6px 20px rgba(0,0,0,0.05); */
+}
+.mission-vision h2 {
+  font-size: 2.8rem; /* slightly larger for prominence on desktop */
+  margin-bottom: 15px;
+  color: #1b4332;
+  line-height: 1.15;
+}
+.mission-vision p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  color: #333;
+}.mission-vision {
+  position: relative;
+}
+.mission-vision::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: -1;
 }
