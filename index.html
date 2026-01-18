@@ -149,30 +149,65 @@ This teaching affirms that compassion, service, and obedience are central to the
     our ability to serve the community with transparency, accountability, and care.
   </p>
 </section>
+      <!-- Small Floating Banner -->
+<div id="donation-banner" style="
+    position: fixed;
+    bottom: 0; /* change to top:0; if you want it at the top */
+    left: 0;
+    width: 100%;
+    background-color: #28a745; /* green to match page */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 9998;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
+">
+  Support us today — every donation makes a difference!
+</div>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+
+    <!-- Call Button -->
+    <a href="tel:5028229155" class="call-btn">
+        Reach Out Now
+    </a>
+
+    <!-- Stripe Donate Button -->
+    <stripe-buy-button
+        buy-button-id="buy_btn_1SqRDdRwGwjOlUNrT4xpH341"
+        publishable-key="pk_live_51SqNg6RwGwjOlUNrRJQ8kkHINbLSQx3Oiu6pvH035EAAm0CwtRWA4UMgWhqkLPDj0TMFLD4ij7XCg1uo7U4SPQdN00fZ2hcw1g"
+    ></stripe-buy-button>
+
+</div>
+
+<!-- Stripe JS -->
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
 <style>
-/* Floating animation */
+/* Floating Buttons Animation */
 @keyframes float {
   0% { transform: translateY(0); }
   100% { transform: translateY(-10px); }
 }
 
-/* Floating Buttons Container */
 .floating-buttons {
   position: fixed;
-  bottom: 30px;
+  bottom: 50px; /* above the banner */
   right: 30px;
   text-align: center;
   z-index: 9999;
   animation: float 3s ease-in-out infinite alternate;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* spacing between buttons */
+  gap: 10px;
 }
 
-/* Call button styling */
 .floating-buttons a.call-btn {
   display: inline-block;
-  background-color: #ff0000; /* red */
+  background-color: #ff0000;
   color: white;
   font-size: 20px;
   font-weight: bold;
@@ -188,12 +223,9 @@ This teaching affirms that compassion, service, and obedience are central to the
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* Stripe button will keep your custom color from Stripe */
-
-/* Mobile adjustments */
 @media only screen and (max-width: 480px) {
   .floating-buttons {
-    bottom: 20px !important;
+    bottom: 60px; /* leave space above the banner */
     right: 10px !important;
   }
   .floating-buttons a.call-btn {
@@ -205,26 +237,4 @@ This teaching affirms that compassion, service, and obedience are central to the
   }
 }
 </style>
-
-<!-- Floating Buttons -->
-<div class="floating-buttons">
-
-    <!-- Call Button -->
-    <a href="tel:5028229155" class="call-btn">
-        Reach Out Now
-    </a>
-<script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1SqRDdRwGwjOlUNrT4xpH341"
-  publishable-key="pk_live_51SqNg6RwGwjOlUNrRJQ8kkHINbLSQx3Oiu6pvH035EAAm0CwtRWA4UMgWhqkLPDj0TMFLD4ij7XCg1uo7U4SPQdN00fZ2hcw1g"
->
-</stripe-buy-button>    
-</div>
-
-<!-- Stripe JS -->
-<script async src="https://js.stripe.com/v3/buy-button.js"></script></div>       
-
 </html>
