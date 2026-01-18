@@ -1,4 +1,57 @@
- age">  <img src="download (4).jpeg" alt="Prayer and faith" class="faith-image">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CUP-RECOVERY</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- PWA manifest -->
+<link rel="manifest" href="manifest.json?v=1">
+  <meta name="theme-color" content="#28a745">
+</head>  
+  <div class="faith-section">
+  <div class="cross-large">✟</div>
+  <h1 style="color: #1b5e20; font-size: 2.5rem; margin: 10px 0;">CUP-RECOVERY</h1>
+  <p style="font-size: 1.2rem; color: #2e7d32; font-weight: bold;">Sober Living Support& Resources</p>
+  <p style="color: #555; margin: 15px 0;">Providing housing support, food, hygiene essentials, and faith based recovery resources</p>
+</div>
+
+<img src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="The Cross of Jesus Christ" class="hero-image">
+
+<section style="max-width: 1000px; margin: 0 auto;">
+
+<h2 style="text-align: center; font-size: 2rem; color: #1b5e20;">Our Foundation in Christ</h2>
+
+<blockquote style="text-align: center; font-size: 1.2rem; margin-top: 40px;">
+  “For I was hungry and you gave me food, I was thirsty and you gave me drink,
+  I was a stranger and you welcomed me, I was naked and you clothed me,
+  I was sick and you visited me, I was in prison and you came to me…  
+  Truly, I say to you, as you did it to one of the least of these my brothers,
+  you did it to me.”
+  <br>
+  <span class="scripture-ref">Matthew 25:31–46</span>
+</blockquote>
+<div style="text-align: center; margin: 40px 0;">
+
+<h2 style="margin-top: 30px;">How We Help</h2>
+
+<p>
+At CUP-RECOVERY, we support individuals in recovery by meeting essential, practical needs that help create
+stability during early and ongoing sober living.
+</p>
+
+<ul style="line-height: 1.8;">
+  <li>Temporary housing assistance and sober living support</li>
+  <li>Food, groceries, and daily meal support</li>
+  <li>Hygiene essentials and basic personal care items</li>
+  <li>Limited transportation for work, meetings, and appointments through volunters,as available</li>
+  <li>Connection to faith-based and community recovery resources</li>
+</ul>
+  <p>
+  <p style="margin-top: 20px;">
+  These supports are offered as an expression of our faith and our commitment to serve others with compassion, accountability, and hope.
+  <img src="community-work.jpg" alt="Serving the community through honest work" class="faith-image">  <img src="download (4).jpeg" alt="Prayer and faith" class="faith-image">
 </div>
  <h2>Matthew 25:31–46 (The Least Of These)</h2>
 
@@ -99,112 +152,92 @@ This teaching affirms that compassion, service, and obedience are central to the
     our ability to serve the community with transparency, accountability, and care.
   </p>
 </section>
-<!-- Floating Buttons Container -->
-<div class="floating-buttons">
-  <!-- Call Button -->
-  <a href="tel:5028229155" class="call-btn">Reach Out Now</a>
-
-  <!-- Stripe Donate Banner -->
-  <div class="floating-banner">
-    <stripe-buy-button
-      buy-button-id="buy_btn_1SqRDdRwGwjOlUNrT4xpH341"
-      publishable-key="pk_live_51SqNg6RwGwjOlUNrRJQ8kkHINbLSQx3Oiu6pvH035EAAm0CwtRWA4UMgWhqkLPDj0TMFLD4ij7XCg1uo7U4SPQdN00fZ2hcw1g">
-      Help Make a Difference
-    </stripe-buy-button>
-  </div>
+      <!-- Small Floating Banner -->
+<div id="donation-banner" style="
+    position: fixed;
+    bottom: 0; /* change to top:0; if you want it at the top */
+    left: 0;
+    width: 100%;
+    background-color: #28a745; /* green to match page */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 9998;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
+">
+  Support us today — every donation makes a difference!
 </div>
 
-<!-- Styles -->
-<style>
-/* Floating Buttons */
-.floating-buttons {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 1000;
-}
+<!-- Floating Buttons -->
+<div class="floating-buttons">
 
-/* Call Button Style */
-.call-btn {
-  background-color: red;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
+    <!-- Call Button -->
+    <a href="tel:5028229155" class="call-btn">
+        Reach Out Now
+    </a>
 
-/* Stripe Donate Banner */
-.floating-banner {
-  position: fixed;
-  bottom: -60px; /* start off-screen */
-  left: 0;
-  width: 100%;
-  background-color: blue;
-  text-align: center;
-  padding: 12px 0;
-  font-weight: bold;
-  font-size: 16px;
-  z-index: 999;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.3);
-  transition: bottom 0.5s ease; /* slide up */
-}
+    <!-- Stripe Donate Button -->
+    <stripe-buy-button
+        buy-button-id="buy_btn_1SqRDdRwGwjOlUNrT4xpH341"
+        publishable-key="pk_live_51SqNg6RwGwjOlUNrRJQ8kkHINbLSQx3Oiu6pvH035EAAm0CwtRWA4UMgWhqkLPDj0TMFLD4ij7XCg1uo7U4SPQdN00fZ2hcw1g"
+    ></stripe-buy-button>
 
-/* Make Stripe button fill banner */
-.floating-banner stripe-buy-button {
-  width: auto !important;
-  max-width: 90%;
-  font-size: 16px;
-}
-
-/* Optional: subtle swim animation */
-@keyframes swim {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
-  100% { transform: translateY(0px); }
-}
-
-.floating-banner.swim {
-  animation: swim 2s infinite ease-in-out;
-}
-
-/* Mobile friendly override */
-body, html {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-img, iframe, stripe-buy-button {
-  max-width: 100%;
-  height: auto;
-}
-
-.section {
-  width: 90%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-</style>
+</div>
 
 <!-- Stripe JS -->
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
-<!-- Slide up + swim animation -->
-<script>
-window.addEventListener('load', function() {
-  const banner = document.querySelector('.floating-banner');
-  setTimeout(() => {
-    banner.style.bottom = '0';
-    banner.classList.add('swim');
-  }, 300);
-})
-  </html>
-;
-</script> 
+<style>
+/* Floating Buttons Animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+.floating-buttons {
+  position: fixed;
+  bottom: 50px; /* above the banner */
+  right: 30px;
+  text-align: center;
+  z-index: 9999;
+  animation: float 3s ease-in-out infinite alternate;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.floating-buttons a.call-btn {
+  display: inline-block;
+  background-color: #ff0000;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.floating-buttons a.call-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+@media only screen and (max-width: 480px) {
+  .floating-buttons {
+    bottom: 60px; /* leave space above the banner */
+    right: 10px !important;
+  }
+  .floating-buttons a.call-btn {
+    font-size: 16px !important;
+    padding: 10px 25px !important;
+  }
+  .floating-buttons stripe-buy-button {
+    transform: scale(0.9);
+  }
+}
+</style>
+</html>
