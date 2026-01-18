@@ -158,21 +158,33 @@ This teaching affirms that compassion, service, and obedience are central to the
   publishable-key="pk_live_51SqNg6RwGwjOlUNrRJQ8kkHINbLSQx3Oiu6pvH035EAAm0CwtRWA4UMgWhqkLPDj0TMFLD4ij7XCg1uo7U4SPQdN00fZ2hcw1g"
 >
 </stripe-buy-button>
- </div>
-<div style="text-align:center; margin-top:50px;">
-    <a href="tel:15028229155" style="
-        display:inline-block;
-        background-color:#ff0000;
-        color:white;
-        font-size:28px;
-        font-weight:bold;
-        padding:25px 50px;
-        border-radius:15px;
-        text-decoration:none;
-    ">
+   <!-- Floating QR + Call Button -->
+<div style="position: fixed; bottom: 30px; right: 30px; text-align: center; z-index: 9999;">
+
+    <!-- QR Code -->
+    <div style="margin-bottom:10px;">
+        <img src="/images/qrcode.png" width="120" alt="Scan QR Code" style="border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.3);">
+    </div>
+
+    <!-- Call Button -->
+    <a href="tel:15028229155" 
+       style="
+           display:inline-block;
+           background-color:#ff0000;
+           color:white;
+           font-size:20px;
+           font-weight:bold;
+           padding:15px 35px;
+           border-radius:50px;
+           text-decoration:none;
+           box-shadow:0 5px 15px rgba(0,0,0,0.3);
+           transition: transform 0.3s, box-shadow 0.3s;
+       "
+       onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.4)';"
+       onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.3)';">
         Reach Out Now
     </a>
+
 </div>    
-    
 </a>    
 </html>
