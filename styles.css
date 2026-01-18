@@ -456,4 +456,22 @@ blockquote {
   height: auto;
   display: block;
 }
+<style>
+/* Force mobile layout at the bottom */
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
+img, iframe, stripe-buy-button {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Optional: center content sections */
+.section {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+</style>
