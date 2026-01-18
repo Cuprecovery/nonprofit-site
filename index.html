@@ -1,42 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celebrating Unleashed Potential</title>
-</head> 
-    <style>
-/* Mobile-friendly override */
-body, html {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-img, iframe, stripe-buy-button {
-    max-width: 100%;
-    height: auto;
-}
-
-.section {
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-<style>
-/* Restore faith-based color theme */
-body {
-    background-color: #28a745; /* your green */
-    color: white;
-}
-
-.section {
-    background-color: #28a745; /* each section */
-    color: white;
-}
-</style>        
-</style></head>  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CUP-RECOVERY</title>
+  <link rel="stylesheet" href="styles.css">
+</head>  
   <div class="faith-section">
   <div class="cross-large">✟</div>
   <h1 style="color: #1b5e20; font-size: 2.5rem; margin: 10px 0;">CUP-RECOVERY</h1>
@@ -179,65 +149,30 @@ This teaching affirms that compassion, service, and obedience are central to the
     our ability to serve the community with transparency, accountability, and care.
   </p>
 </section>
-      <!-- Small Floating Banner -->
-<div id="donation-banner" style="
-    position: fixed;
-    bottom: 0; /* change to top:0; if you want it at the top */
-    left: 0;
-    width: 100%;
-    background-color: #28a745; /* green to match page */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-weight: bold;
-    font-size: 16px;
-    z-index: 9998;
-    box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
-">
-  Support us today — every donation makes a difference!
-</div>
-
-<!-- Floating Buttons -->
-<div class="floating-buttons">
-
-    <!-- Call Button -->
-    <a href="tel:5028229155" class="call-btn">
-        Reach Out Now
-    </a>
-
-    <!-- Stripe Donate Button -->
-    <stripe-buy-button
-        buy-button-id="buy_btn_1SqRDdRwGwjOlUNrT4xpH341"
-        publishable-key="pk_live_51SqNg6RwGwjOlUNrRJQ8kkHINbLSQx3Oiu6pvH035EAAm0CwtRWA4UMgWhqkLPDj0TMFLD4ij7XCg1uo7U4SPQdN00fZ2hcw1g"
-    ></stripe-buy-button>
-
-</div>
-
-<!-- Stripe JS -->
-<script async src="https://js.stripe.com/v3/buy-button.js"></script>
-
 <style>
-/* Floating Buttons Animation */
+/* Floating animation */
 @keyframes float {
   0% { transform: translateY(0); }
   100% { transform: translateY(-10px); }
 }
 
+/* Floating Buttons Container */
 .floating-buttons {
   position: fixed;
-  bottom: 50px; /* above the banner */
+  bottom: 30px;
   right: 30px;
   text-align: center;
   z-index: 9999;
   animation: float 3s ease-in-out infinite alternate;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 10px; /* spacing between buttons */
 }
 
+/* Call button styling */
 .floating-buttons a.call-btn {
   display: inline-block;
-  background-color: #ff0000;
+  background-color: #ff0000; /* red */
   color: white;
   font-size: 20px;
   font-weight: bold;
@@ -253,9 +188,12 @@ This teaching affirms that compassion, service, and obedience are central to the
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
+/* Stripe button will keep your custom color from Stripe */
+
+/* Mobile adjustments */
 @media only screen and (max-width: 480px) {
   .floating-buttons {
-    bottom: 60px; /* leave space above the banner */
+    bottom: 20px !important;
     right: 10px !important;
   }
   .floating-buttons a.call-btn {
@@ -267,25 +205,26 @@ This teaching affirms that compassion, service, and obedience are central to the
   }
 }
 </style>
-<style>
-/* Make site actually fit on phones */
-body, html {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
 
-/* Make images & Stripe button scale */
-img, iframe, stripe-buy-button {
-  max-width: 100%;
-  height: auto;
-}
+<!-- Floating Buttons -->
+<div class="floating-buttons">
 
-/* Optional: help sections center nicely */
-.section, .container {
-  width: 90%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-</style>      
+    <!-- Call Button -->
+    <a href="tel:5028229155" class="call-btn">
+        Reach Out Now
+    </a>
+<script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1SqRDdRwGwjOlUNrT4xpH341"
+  publishable-key="pk_live_51SqNg6RwGwjOlUNrRJQ8kkHINbLSQx3Oiu6pvH035EAAm0CwtRWA4UMgWhqkLPDj0TMFLD4ij7XCg1uo7U4SPQdN00fZ2hcw1g"
+>
+</stripe-buy-button>    
+</div>
+
+<!-- Stripe JS -->
+<script async src="https://js.stripe.com/v3/buy-button.js"></script></div>       
+
 </html>
