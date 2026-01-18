@@ -149,88 +149,111 @@ This teaching affirms that compassion, service, and obedience are central to the
     our ability to serve the community with transparency, accountability, and care.
   </p>
 </section>
-<style>
-/* Floating animation */
-@keyframes float {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
-}
+<!-- Floating Buttons Container -->
+<div class="floating-buttons">
+  <!-- Call Button -->
+  <a href="tel:5028229155" class="call-btn">Reach Out Now</a>
 
-/* Floating Buttons Container */
+  <!-- Stripe Donate Banner -->
+  <div class="floating-banner">
+    <stripe-buy-button
+      buy-button-id="buy_btn_1SqRDdRwGwjOlUNrT4xpH341"
+      publishable-key="pk_live_51SqNg6RwGwjOlUNrRJQ8kkHINbLSQx3Oiu6pvH035EAAm0CwtRWA4UMgWhqkLPDj0TMFLD4ij7XCg1uo7U4SPQdN00fZ2hcw1g">
+      Help Make a Difference
+    </stripe-buy-button>
+  </div>
+</div>
+
+<!-- Styles -->
+<style>
+/* Floating Buttons */
 .floating-buttons {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  text-align: center;
-  z-index: 9999;
-  animation: float 3s ease-in-out infinite alternate;
+  bottom: 20px;
+  right: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* spacing between buttons */
+  gap: 10px;
+  z-index: 1000;
 }
 
-/* Call button styling */
-.floating-buttons a.call-btn {
-  display: inline-block;
-  background-color: #ff0000; /* red */
+/* Call Button Style */
+.call-btn {
+  background-color: red;
   color: white;
-  font-size: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
   font-weight: bold;
-  padding: 15px 35px;
-  border-radius: 50px;
+  text-align: center;
   text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
-.floating-buttons a.call-btn:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+/* Stripe Donate Banner */
+.floating-banner {
+  position: fixed;
+  bottom: -60px; /* start off-screen */
+  left: 0;
+  width: 100%;
+  background-color: blue;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 999;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.3);
+  transition: bottom 0.5s ease; /* slide up */
 }
 
-/* Stripe button will keep your custom color from Stripe */
+/* Make Stripe button fill banner */
+.floating-banner stripe-buy-button {
+  width: auto !important;
+  max-width: 90%;
+  font-size: 16px;
+}
 
-/* Mobile adjustments */
-@media only screen and (max-width: 480px) {
-  .floating-buttons {
-    bottom: 20px !important;
-    right: 10px !important;
-  }
-  .floating-buttons a.call-btn {
-    font-size: 16px !important;
-    padding: 10px 25px !important;
-  }
-  .floating-buttons stripe-buy-button {
-    transform: scale(0.9);
-  }
+/* Optional: subtle swim animation */
+@keyframes swim {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating-banner.swim {
+  animation: swim 2s infinite ease-in-out;
+}
+
+/* Mobile friendly override */
+body, html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img, iframe, stripe-buy-button {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 </style>
 
-<!-- Floating Buttons -->
-<div class="floating-buttons">
-
-    <!-- Call Button -->
-    <a href="tel:5028229155" class="call-btn">
-        Reach Out Now
-    </a>
-<script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1SqRDdRwGwjOlUNrT4xpH341"
-  publishable-key="pk_live_51SqNg6RwGwjOlUNrRJQ8kkHINbLSQx3Oiu6pvH035EAAm0CwtRWA4UMgWhqkLPDj0TMFLD4ij7XCg1uo7U4SPQdN00fZ2hcw1g"
->
-</stripe-buy-button>    
-</div>
-
 <!-- Stripe JS -->
-<script async src="https://js.stripe.com/v3/buy-button.js"></script></div>       
-<!-- Floating Donate Banner -->
-<div class="floating-banner">
-  <a href="https://buy.stripe.com/test_YOUR_BUY_BUTTON_ID" target="_blank">
-    Help Make a Difference
-  </a>
-</div>
-  
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+<!-- Slide up + swim animation -->
+<script>
+window.addEventListener('load', function() {
+  const banner = document.querySelector('.floating-banner');
+  setTimeout(() => {
+    banner.style.bottom = '0';
+    banner.classList.add('swim');
+  }, 300);
+});
+</script>  
   </html>
