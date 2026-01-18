@@ -440,38 +440,5 @@ blockquote {
   .mission-header { padding: 60px 14px; }
   .mission-header h2 { font-size: 2rem; }
 }
-.qr-section {
-  text-align: center;
-  margin: 40px 0;
-}
-.qr-card {
-  display: inline-block;
-  background: #fff;
-  padding: 12px;
-  border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(0,0,0,.12);
-}
-.qr-code {
-  width: 180px;
-  height: auto;
-  display: block;
-}
-<style>
-/* Force mobile layout at the bottom */
-body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
 
-img, iframe, stripe-buy-button {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Optional: center content sections */
-.section {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-</style>
+  wi
