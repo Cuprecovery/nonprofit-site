@@ -463,4 +463,26 @@ img, iframe, svg {
   max-width: 600px;
   margin: 0 auto;
 }
+<style>
+.floating-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: blue; /* you can change this */
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 1000;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.3);
+}
+
+.floating-banner a {
+  color: white;
+  text-decoration: none;
+}
+</style>
+
 </style>
