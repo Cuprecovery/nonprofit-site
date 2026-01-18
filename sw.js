@@ -1,5 +1,7 @@
-const CACHE_NAME = 'donation-app-cache-v1';
-const urlsToCache = [
+self.addEventListener('install', (event) => {
+  self.skipWaiting(); // Force new service worker to activate immediately
+});
+const CACHE_NAME = 'donation-app-cache-v2'; // increment the versionconst urlsToCache = [
   '/',
   '/index.html',
   '/manifest.json',
