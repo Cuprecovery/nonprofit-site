@@ -441,4 +441,26 @@ blockquote {
   .mission-header h2 { font-size: 2rem; }
 }
 
-  wi
+<style>
+/* Make the site responsive on mobile */
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+h1, h2, p, a, button {
+  word-wrap: break-word;
+  font-size: 1.1rem; /* larger for readability */
+}
+
+img, iframe, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.container, .section {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+</style>
