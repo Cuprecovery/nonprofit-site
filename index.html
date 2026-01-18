@@ -158,16 +158,16 @@ This teaching affirms that compassion, service, and obedience are central to the
   publishable-key="pk_live_51SqNg6RwGwjOlUNrRJQ8kkHINbLSQx3Oiu6pvH035EAAm0CwtRWA4UMgWhqkLPDj0TMFLD4ij7XCg1uo7U4SPQdN00fZ2hcw1g"
 >
 </stripe-buy-button>
-   <!-- Floating QR + Call Button -->
-<div style="position: fixed; bottom: 30px; right: 30px; text-align: center; z-index: 9999;">
+<!-- Floating QR + Call Button -->
+<div style="position: fixed; bottom: 30px; right: 30px; text-align: center; z-index: 9999; animation: float 3s ease-in-out infinite alternate;">
 
     <!-- QR Code -->
     <div style="margin-bottom:10px;">
-        <img src="/images/qrcode.png" width="120" alt="Scan QR Code" style="border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.3);">
+        <img src="images/images.qrcode.png" width="120" alt="Scan QR Code" style="border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.3);">
     </div>
 
     <!-- Call Button -->
-    <a href="tel:15028229155" 
+    <a href="tel:5029229155" 
        style="
            display:inline-block;
            background-color:#ff0000;
@@ -185,6 +185,12 @@ This teaching affirms that compassion, service, and obedience are central to the
         Reach Out Now
     </a>
 
-</div>    
-</a>    
+</div>
+
+<style>
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+</style>     
 </html>
